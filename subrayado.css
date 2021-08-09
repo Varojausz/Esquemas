@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    color:white;
+}
+a {
+    text-decoration: none;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.green {
+    color: green;
+}
+.yellow {
+    color: yellow;
+}
+.sred {
+    border-bottom: 3px red ridge;
+}
+.sblue {
+    border-bottom: 3px blue ridge;
+}
+.sgreen {
+    border-bottom: 3px green ridge;
+}
+.syellow {
+    border-bottom: 3px yellow ridge;
+}
+.bred {
+    background-color: red;
+}
+.bblue {
+    background-color: blue;
+}
+.bgreen {
+    background-color: green;
+}
+.byellow {
+    background-color: yellow;
+}
+.hacerCambio{
+    color: red;
+}
+button {
+    font-weight: 700;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+}
+.panel div {
+    display: flex;
+    margin: 0 1rem;
+}
+
