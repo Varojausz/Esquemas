@@ -330,7 +330,7 @@
             let body = document.querySelector('body');
             body.insertBefore(crearMain(), script);
 
-            let main = body.lastChild.previousSibling.previousSibling;
+            let main = body.lastChild.previousSibling.previousSibling.previousSibling.previousSibling;
             main.classList.add('supercontainer');
 
             main.append(crearSection());
