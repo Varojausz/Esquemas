@@ -40,6 +40,18 @@ a {
 .navbar .byellow {
     background-image: linear-gradient(transparent 0%, yellow 30% ,yellow 70% , transparent  100%);
 }
+.bred {
+    background-color: red;
+}
+.bblue {
+    background-color: blue;
+}
+.bgreen {
+    background-color: green;
+}
+.byellow {
+    background-color: yellow;
+}
 .hacerCambio{
     color: red;
 }
