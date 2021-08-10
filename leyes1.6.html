@@ -8,15 +8,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="subrayado.css">
     <style>
+        :root {
+            --color1: #6be9ca;
+            --color2: #2196F3;
+            --color3: #21e931;
+            --color4: mediumorchid;
+            --color5: rgb(131, 127, 127);
+            --color6: rgb(189, 186, 186);
+            --color7: rgb(78, 78, 77);
+        }
         body {
             margin: 0;
         }
         .navbar {
             position:fixed;
-            background-color: black;
+            background-color: lightgrey;
             width: 100%;
-            border-top: 2px solid gold;
-            border-bottom: 2px solid gold;
+            display: flex;
+            flex-wrap: wrap;
+/*             border-top: 2px solid gold;
+            border-bottom: 2px solid gold; */
         }
         .option {
             border-radius: 0;
@@ -35,13 +46,38 @@
             margin: 0 0 0.75rem 0.75rem;
             margin-top: 3rem;
         }
+        button {
+            background-color: white;
+            border-radius: 5px;
+        }
         .boton0, .boton1, .boton2 {
             margin-top: 0.5rem;
+            border: none;
+            box-shadow: 0 2px 5px 2px black;
+        }
+        .boton0 {
+            background-color: var(--color3);
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .boton1 {
+        background-color: red;
+        width: 1.5rem;
+        height: 1.5rem;
+        }
+        .boton2 {
+            background-color: yellow;
+            width: 1.5rem;
+            height: 1.5rem;
         }
 /*         .boton {
             background-color: dimgrey;
             padding: 0.75rem;
         } */
+        .botones-texto {
+            display: flex;
+            flex-wrap: wrap ;
+        }
         .container {
             display:grid;
             grid-template-columns: minmax(5rem auto) auto;
@@ -58,12 +94,14 @@
             justify-content: center;
             padding: 0.5rem;
             background-color:mediumorchid;
+            border-radius: 10px;
+            box-shadow: 0 3px 5px 2px black;
         }
         .titulo {
             font-weight: bold;
-            border: 2px black solid;
+            /* border: 0.25rem indigo dashed; */
             padding: 0.5rem;
-            border-radius: 30%;
+
         }
         .subcontainer {
             display:grid;
@@ -82,17 +120,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0.3rem;
-            background-color:rgb(189, 65, 148);
-            border: 2px black solid;
+            /* padding: 0.3rem; */
+            background-image: linear-gradient(var(--color1) 0%, var(--color3) 30% ,var(--color3) 70% , var(--color1)  100%);
             font-weight: bold;
             min-width: 6rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 5px 2px black;
         }
         .contarticulo {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color:rgb(239, 248, 113);
+            background-image:linear-gradient(var(--color1)  0%,var(--color2) 30%,var(--color2) 70% , var(--color1)  100%);
+            border-radius: 10px;
+            box-shadow: 0 3px 5px 2px black;
         }
         .hide {
             display: none;
@@ -103,24 +144,30 @@
 <body>
     <nav class="navbar">
         <button class="option esquema1">Esquema 1</button>
-        <button class="option esquema2">Esquema 2</button>
+        <!-- <button class="option esquema2">Esquema 2</button> -->
         <button class="option guardar">Guardar</button>
         <button class="option cargar">Cargar</button>
 
-        <button class="red">A</button>
-        <button class="green">A</button>
-        <button class="blue">A</button>
-        <button class="yellow">A</button>
-
-        <button class="bred">B</button>
-        <button class="bgreen">B</button>
-        <button class="bblue">B</button>
-        <button class="byellow">B</button>
-
-        <button class="sred">S</button>
-        <button class="sgreen">S</button>
-        <button class="sblue">S</button>
-        <button class="syellow">S</button>
+        <section class="botones-texto">
+            <div class="botones-texto">
+                <button class="red">A</button>
+                <button class="green">A</button>
+                <button class="blue">A</button>
+                <button class="yellow">A</button>
+            </div>
+            <div class="botones-texto">
+                <button class="bred">B</button>
+                <button class="bgreen">B</button>
+                <button class="bblue">B</button>
+                <button class="byellow">B</button>
+            </div>
+            <div class="botones-texto">
+                <button class="sred">S</button>
+                <button class="sgreen">S</button>
+                <button class="sblue">S</button>
+                <button class="syellow">S</button>
+            </div>
+        </section>
     </nav>
 
     <script id="script">
@@ -321,7 +368,7 @@
             articulo.append(crearDiv());
             articulo.lastChild.classList.add('contarticulo');
             articulo.lastChild.append(crearP());
-            articulo.lastChild.lastChild.textContent = "Escribe aquí lo que sea";
+            articulo.lastChild.lastChild.textContent = "____________";
             articulo.lastChild.lastChild.setAttribute('contenteditable','true')
         }
 
@@ -330,7 +377,7 @@
             let body = document.querySelector('body');
             body.insertBefore(crearMain(), script);
 
-            let main = body.lastChild.previousSibling.previousSibling;
+            let main = body.lastChild.previousSibling.previousSibling.previousSibling.previousSibling;
             main.classList.add('supercontainer');
 
             main.append(crearSection());
