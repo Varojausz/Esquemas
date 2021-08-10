@@ -14,7 +14,7 @@
             --color3: #21e931;
             --color4: mediumorchid;
             --color5: rgb(131, 127, 127);
-            --color6: rgb(189, 186, 186);
+            --color6: rgb(218, 218, 218);
             --color7: rgb(78, 78, 77);
         }
         body {
@@ -22,7 +22,6 @@
         }
         .navbar {
             position:fixed;
-            background-color: lightgrey;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -46,38 +45,46 @@
             margin: 0 0 0.75rem 0.75rem;
             margin-top: 3rem;
         }
-        button {
-            background-color: white;
-            border-radius: 5px;
+        .navbar button {
+            background-image: linear-gradient(var(--color5) 0%, var(--color6) 20% ,var(--color6) 80% , var(--color5)  100%);
+            box-shadow: 0 0 3px 0 black;
+            border-radius: 8px;
         }
         .boton0, .boton1, .boton2 {
             margin-top: 0.5rem;
-            border: none;
-            box-shadow: 0 2px 5px 2px black;
+            /* border: none; */
+            border-radius: 8px;
+            box-shadow: 0 2px 3px 1px black;
         }
         .boton0 {
             background-color: var(--color3);
+            background-image: url('plus.png');
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 70%;
+            background-repeat: no-repeat;
             width: 1.5rem;
             height: 1.5rem;
         }
         .boton1 {
         background-color: red;
+        background-image: url('close.png');
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
         width: 1.5rem;
         height: 1.5rem;
         }
         .boton2 {
             background-color: yellow;
+            background-image: url('minus.png');
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 70%;
+            background-repeat: no-repeat;
             width: 1.5rem;
             height: 1.5rem;
-        }
-        .boton0 {
-            background-color: lightgreen;
-        }
-        .boton1 {
-        background-color: red;
-        }
-        .boton2 {
-            background-color: yellow;
         }
 /*         .boton {
             background-color: dimgrey;
@@ -152,7 +159,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <button class="option esquema1">Esquema 1</button>
+        <button class="option esquema1">Esquema</button>
         <!-- <button class="option esquema2">Esquema 2</button> -->
         <button class="option guardar">Guardar</button>
         <button class="option cargar">Cargar</button>
@@ -175,6 +182,7 @@
                 <button class="sgreen">S</button>
                 <button class="sblue">S</button>
                 <button class="syellow">S</button>
+                
             </div>
         </section>
     </nav>
@@ -394,15 +402,15 @@
             botones.classList.add('botones');
             botones.append(crearButton());
             botones.lastChild.classList.add('boton0')
-            botones.lastChild.textContent = "+"
+            //botones.lastChild.textContent = "+"
             botones.lastChild.addEventListener('click',crearArticulo);
             botones.append(crearButton());
             botones.lastChild.classList.add('boton1')
-            botones.lastChild.textContent = "X"
+            //botones.lastChild.textContent = "X"
             botones.lastChild.addEventListener('click',eliminarArticulos);
             botones.append(crearButton());
             botones.lastChild.classList.add('boton2')
-            botones.lastChild.textContent = "-"
+            //botones.lastChild.textContent = "-"
             botones.lastChild.addEventListener('click',eliminarUltimoArticulo);
 
 
