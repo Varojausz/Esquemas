@@ -28,16 +28,29 @@ a {
 .syellow {
     border-bottom: 3px yellow ridge;
 }
-.navbar .bred {
+
+.bred {
+    background-color: red;
+}
+.bblue {
+    background-color: blue;
+}
+.bgreen {
+    background-color: green;
+}
+.byellow {
+    background-color: yellow;
+}
+#bred {
     background-image: linear-gradient(transparent 0%, red 30% ,red 70% , transparent  100%);
 }
-.navbar .bblue {
+#bblue {
     background-image: linear-gradient(transparent 0%, blue 30% ,blue 70% , transparent  100%);
 }
-.navbar .bgreen {
+#bgreen  {
     background-image: linear-gradient(transparent 0%, green 30% ,green 70% , transparent  100%);
 }
-.navbar .byellow {
+#byellow  {
     background-image: linear-gradient(transparent 0%, yellow 30% ,yellow 70% , transparent  100%);
 }
 .hacerCambio{
