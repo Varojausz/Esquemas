@@ -1,6 +1,11 @@
 body {
     color:white;
 }
+.navbar button {
+    /* background-image: linear-gradient(var(--color5) 0%, var(--color6) 20% ,var(--color6) 80% , var(--color5)  100%); */
+    box-shadow: 0 0 3px 0 black;
+    border-radius: 8px;
+}
 a {
     text-decoration: none;
 }
@@ -39,6 +44,18 @@ a {
     background-color: green;
 }
 .byellow {
+    background-color: yellow;
+}
+#bred {
+    background-color: red;
+}
+#bblue {
+    background-color: blue;
+}
+#bgreen {
+    background-color: green;
+}
+#byellow {
     background-color: yellow;
 }
 /* .navbar .bred {
